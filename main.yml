@@ -1,0 +1,22 @@
+- hosts: springapp
+  remote_user: infra
+  become: yes
+  gather_facts: False
+
+- name: apply frontend roles
+  hosts: frontend
+  remote_user: infra
+  become: yes
+  gather_facts: False
+  roles:
+    - role: role_test
+      tags: role_test
+
+- name: apply backend roles
+  hosts: backend
+  remote_user: infra
+  become: yes
+  gather_facts: False
+  roles:
+    - role: role_test
+      tags: role_test

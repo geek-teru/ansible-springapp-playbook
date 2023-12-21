@@ -1,0 +1,12 @@
+[dev:children]
+springapp
+
+[springapp:children]
+frontend
+backend
+
+[frontend]
+dev-frontend-01 ansible_host=test01.local
+
+[backend]
+dev-backend-01 ansible_host=test02.local
