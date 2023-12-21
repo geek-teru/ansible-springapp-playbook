@@ -9,8 +9,8 @@
   become: yes
   gather_facts: False
   roles:
-    - role: role_test
-      tags: role_test
+    - role: ansible-nginx-role
+      tags: nginx-role
 
 - name: apply backend roles
   hosts: backend
@@ -18,5 +18,3 @@
   become: yes
   gather_facts: False
   roles:
-    - role: role_test
-      tags: role_test
